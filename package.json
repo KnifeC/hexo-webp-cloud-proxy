@@ -1,6 +1,6 @@
 {
   "name": "hexo-webp-cloud-proxy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Hexo Plugin To Easily Use Webp Cloud Service",
   "main": "index.js",
   "scripts": {
