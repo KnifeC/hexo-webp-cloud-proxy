@@ -20,7 +20,7 @@ hexo.extend.filter.register('after_post_render', (data) => {
             return p2.endsWith(element);
         });
         if (!value) {
-            return;
+            return str;
         }
         if (p2.startsWith("/")) {
             let img_url = proxy_url + p2;
