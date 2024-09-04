@@ -29,6 +29,8 @@ hexo.extend.filter.register('after_post_render', (data) => {
         if (p2.startsWith(pre_url)) {
             let img_url = p2.replace(pre_url, proxy_url);
             return str.replace(p2, img_url)
+        } else {
+            return str;
         }
     });
 }, priority);
