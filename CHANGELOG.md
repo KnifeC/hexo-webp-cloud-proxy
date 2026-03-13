@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.5] - 2026/03/13
+
+* feat:新增server_mode_enable配置项，用于在server模式下是否启用插件 [#4](https://github.com/KnifeC/hexo-webp-cloud-proxy/pull/4)
+
 
 ## [1.0.3] - 2024/09/12
 
