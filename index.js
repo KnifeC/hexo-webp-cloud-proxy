@@ -15,7 +15,9 @@ hexo.extend.filter.register('after_post_render', (data) => {
     if (!enable) {
         return;
     }
-    if (hexo.env.dev && !server_mode_enable) {
+    const currentCmd = hexo.env.cmd;
+    const isServerMode = currentCmd === 'server' || currentCmd === 's';
+    if (isServerMode && !server_mode_enable) {
         return;
     }
     data.content = data.content.replace(/<img(.*?)src="(.*?)"(.*?)>/gi, (str, p1, p2) => {
