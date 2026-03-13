@@ -5,6 +5,7 @@ let convertList = hexo.config.webp_cloud_proxy.convert_type_list;
 let pre_url = hexo.config.webp_cloud_proxy.pre_url;
 let proxy_url = hexo.config.webp_cloud_proxy.proxy_url;
 let priority = hexo.config.webp_cloud_proxy.priority || 10;
+let server_mode_enable = hexo.config.webp_cloud_proxy.server_mode_enable !== false;
 
 
 hexo.extend.filter.register('after_post_render', (data) => {
@@ -12,6 +13,9 @@ hexo.extend.filter.register('after_post_render', (data) => {
         convertList = ["jpg", "jpeg", "png", "gif"];
     }
     if (!enable) {
+        return;
+    }
+    if (hexo.env.dev && !server_mode_enable) {
         return;
     }
     data.content = data.content.replace(/<img(.*?)src="(.*?)"(.*?)>/gi, (str, p1, p2) => {

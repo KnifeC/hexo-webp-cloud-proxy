@@ -20,6 +20,8 @@ webp_cloud_proxy:
   proxy_url: https://webp.keshane.moe
   # the filter priority, see https://hexo.io/api/filter.html
   priority: 10
+  # whether to enable conversion in dev mode (hexo server), default: true
+  server_mode_enable: true
 ```
 
 
